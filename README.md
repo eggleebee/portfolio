@@ -2,4 +2,12 @@
 
 git init
 
-설명작성하세요
+git add README.md
+
+git commit -m "첫 업로드"
+
+git branch -M main
+
+git remote add origin https://github.com/eggleebee/portfolio.git
+
+git push -u origin main
