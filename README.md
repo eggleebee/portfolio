@@ -11,3 +11,5 @@ git branch -M main
 git remote add origin https://github.com/eggleebee/portfolio.git
 
 git push -u origin main
+
+GitHub Pages 배포하기 with React
