@@ -1,20 +1,25 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
-import HomeView from './views/HomeView';
+import React, { useEffect } from "react";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import HomeView from "./views/HomeView";
+import smooth from "./utils/smooth";
+import link from "./utils/link";
 
+const App = () => {
+    useEffect(() => {
+        smooth();
+        link();
+    }, []);
 
-function App() {
-  return (
-    <div>
-     {/*  <HomeView /> */}
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<HomeView />} />
-        </Routes>
-      </HashRouter>
-
-    </div>
-  );
-}
+    return (
+       /*  
+       <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomeView />} />
+            </Routes>
+        </BrowserRouter> 
+        */
+        <HomeView />
+    );
+};
 
 export default App;
